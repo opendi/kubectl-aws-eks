@@ -20,7 +20,7 @@ echo "$KUBE_CONFIG_DATA" | base64 -d > /tmp/config
 export KUBECONFIG=/tmp/config
 
 echo "Pulling kubectl for version $ARCH/$KUBECTL_VERSION"
-    curl -sL -o /usr/bin/kubectl https://storage.googleapis.com/kubernetes-release/release/"$KUBECTL_VERSION"/bin/linux/$ARCH/kubectl && \
+    curl -sL -o /usr/bin/kubectl https://storage.googleapis.com/kubernetes-release/release/$KUBECTL_VERSION/bin/linux/$ARCH/kubectl && \
         chmod +x /usr/bin/kubectl
     echo "Using kubectl version: "
     kubectl version --output=yaml

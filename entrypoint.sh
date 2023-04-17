@@ -3,7 +3,7 @@
 set -e
 
 if [ -z ${KUBECTL_VERSION+x} ] ; then
-  KUBECTL_VERSION=v1.25.0
+  KUBECTL_VERSION=v1.26.0
 fi
 ARCH=$(uname -m)
 case $ARCH in
